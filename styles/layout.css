@@ -1,0 +1,20 @@
+h2 {
+  /* --uno: "text-gray-300 mb-8"; */
+  --uno: "text-gray-300 mb-4";
+}
+h3 {
+  /* --uno: "mb-2 mt-4"; */
+  --uno: "mb-2";
+}
+.slidev-vclick-target {
+  transition: opacity 500ms ease;
+}
+.slidev-vclick-prior {
+  opacity: 0.6 !important;
+}
+.slidev-vclick-hidden {
+  opacity: 0.1 !important;
+}
+.slidev-vclick-current {
+  opacity: 1 !important;
+}
