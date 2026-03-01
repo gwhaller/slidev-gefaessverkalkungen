@@ -49,6 +49,13 @@ layout: two-cols
 <img src="/assets/images/Arterienwand_artheriosklerosis2.jpg" class="mt-20" />
 
 ---
+title: Glykokalyx
+layout: image
+image: "/assets/images/glykokalyx.png"
+backgroundSize: 80%
+---
+
+---
 title: Plaque
 layout: image
 image: /assets/images/plaque.jpg
