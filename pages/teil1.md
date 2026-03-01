@@ -16,13 +16,13 @@ title: Arterien
   </ul>
 </div>
 <SlidevVideo autoplay>
-  <source src="/videos/vid_arterien.mp4" type="video/mp4" />
+  <source src="/assets/videos/vid_arterien.mp4" type="video/mp4" />
 </SlidevVideo>
 
 ---
 title: Erkrankungen
 layout: image-left
-image: /images/plaque.avif
+image: /assets/images/plaque.avif
 ---
 
 # Erkrankungen
@@ -42,23 +42,23 @@ layout: two-cols
 
 # Arterienverkalkung
 
-<img src="/images/Arterienwand_normal.png" class="mt-15"/>
+<img src="/assets/images/Arterienwand_normal.png" class="mt-15"/>
 
 ::right::
 
-<img src="/images/Arterienwand_artheriosklerosis2.jpg" class="mt-20" />
+<img src="/assets/images/Arterienwand_artheriosklerosis2.jpg" class="mt-20" />
 
 ---
 title: Plaque
 layout: image
-image: /images/plaque.jpg
+image: /assets/images/plaque.jpg
 ---
 
 ## <span class="text-black font-bold text-5xl">Arterienverkalkung</span>
 
 ---
 layout: image-left
-image: /images/schlaganfall.avif
+image: /assets/images/schlaganfall.avif
 ---
 
 # Arterienverkalkung
@@ -68,7 +68,7 @@ image: /images/schlaganfall.avif
 ---
 title: Herzinfarkt
 layout: image-right
-image: /images/herz.jpg
+image: /assets/images/herz.jpg
 ---
 
 # Arterienverkalkung
@@ -78,7 +78,7 @@ image: /images/herz.jpg
 ---
 title: pAVK
 layout: image-right
-image: /images/wade.jpg
+image: /assets/images/wade.jpg
 ---
 
 # Arterienverkalkung
@@ -102,7 +102,7 @@ image: /images/wade.jpg
 ---
 title: Bahnhof
 layout: image
-image: /images/bahnhof.jpg
+image: /assets/images/bahnhof.jpg
 ---
 
 <div class="abs-bl left-10 bottom-10 !text-(shadow-lg 5xl)">arterielle Verschlusskrankheit</div>
@@ -113,7 +113,7 @@ src: ./prognose_1.md
 
 ---
 layout: image-left
-image: /images/fuesse.avif
+image: /assets/images/fuesse.avif
 ---
 
 # arterielle Verschlusskrankheit
@@ -135,7 +135,7 @@ image: /images/fuesse.avif
 
 ---
 layout: image-left
-image: /images/fusspulse.jpg
+image: /assets/images/fusspulse.jpg
 clicks: 6
 ---
 
@@ -156,7 +156,7 @@ clicks: 6
 ---
 title: ABI
 layout: image
-image: /images/abi-messung.jpg
+image: /assets/images/abi-messung.jpg
 ---
 
 <div class="abs-tl left-26 top-10 !text-(shadow-lg 4xl) text-black">ABI-Messung</div>
@@ -164,7 +164,7 @@ image: /images/abi-messung.jpg
 ---
 title: ABI-Ausdruck
 layout: image
-image: /images/abi.jpg
+image: /assets/images/abi.jpg
 ---
 
 <span v-mark="{ at: 1, color: 'blue', type: 'circle', strokeWidth: '7' }" class="text-transparent abs-tl mt-108 ml-60">XXXXXXXX</span>
@@ -176,7 +176,7 @@ title: Ultraschall
 ---
 
 <SlidevVideo autoplay class="abs-tl">
-  <source src="/videos/us.mp4" type="video/mp4" />
+  <source src="/assets/videos/us.mp4" type="video/mp4" />
 </SlidevVideo>
 
 <div class="abs-bl bottom-10 !text-(shadow-lg 4xl) ">Ultraschall-Untersuchung</div>
@@ -186,17 +186,17 @@ title: ct
 layout: two-cols
 ---
 
-<img src="/images/ct.jpg" class="w-70"/>
+<img src="/assets/images/ct.jpg" class="w-70"/>
 
 ::right::
 
 <SlidevVideo autoplay>
-  <source src="/videos/3dct.mp4" type="video/mp4"/>
+  <source src="/assets/videos/3dct.mp4" type="video/mp4"/>
 </SlidevVideo>
 
 ---
 layout: image-right
-image: ./images/amputation.gif
+image: ./assets/images/amputation.gif
 clicks: 4
 ---
 
@@ -221,15 +221,15 @@ layout: two-cols
 
 <div class="abs-tl ml-20 mt-16 !text-(shadow-lg 5xl)">Gehtraining</div>
 
-<img src="/images/gehtraining.jpeg" class="object-cover h-full"/>
+<img src="/assets/images/gehtraining.jpeg" class="object-cover h-full"/>
 
 ::right::
 
-<img src="/images/kollateralen.jpg" class="h-full"/>
+<img src="/assets/images/kollateralen.jpg" class="h-full"/>
 
 ---
 layout: image
-image: /images/pta_illu.jpg
+image: /assets/images/pta_illu.jpg
 backgroundSize: 60%
 ---
 
@@ -242,7 +242,7 @@ title: pta
 <div class="abs-tl ml-20 mt-16 !text-(shadow-lg 6xl)">PTA</div>
 
 <SlidevVideo autoplay controls>
-  <source src="/videos/pta.mp4" type="video/mp4" />
+  <source src="/assets/videos/pta.mp4" type="video/mp4" />
 </SlidevVideo>
 
 <Arrow class="timed-fadeout" x1="500" y1="350" x2="440" y2="300" width="3" color="red" />
@@ -269,7 +269,7 @@ title: Carotis-TEA
 ---
 
 <SlidevVideo autoplay class="abs-tl">
-  <source src="/videos/carotis_tea.mp4" type="video/mp4" />
+  <source src="/assets/videos/carotis_tea.mp4" type="video/mp4" />
 </SlidevVideo>
 
 <div class="abs-tl ml-40 mt-16 !text-(shadow-lg 6xl)">TEA</div>
@@ -278,7 +278,7 @@ title: Carotis-TEA
 
 ---
 layout: image
-image: /images/bypass_illu.jpg
+image: /assets/images/bypass_illu.jpg
 backgroundSize: 50%
 ---
 
@@ -286,7 +286,7 @@ backgroundSize: 50%
 
 ---
 layout: image-right
-image: /images/avk.webp
+image: /assets/images/avk.webp
 clicks: 6
 ---
 
@@ -315,7 +315,7 @@ clicks: 6
 </v-clicks>
 
   <div v-if="$clicks === 6" class="">
-    <img src="/icons/klammer.png" class="absolute top-84 left-80 h-35 w-5 inline-block align-top" />
+    <img src="/assets/icons/klammer.png" class="absolute top-84 left-80 h-35 w-5 inline-block align-top" />
     <span class="absolute top-97 left-88 text-2xl !opacity-100">Ernährung</span>
   </div>
 

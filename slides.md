@@ -3,7 +3,7 @@ title: pAVK
 theme: default
 layout: cover
 wakelock: true
-background: /images/wanderer.jpg
+background: /assets/images/wanderer.jpg
 titleTemplate: "%s"
 info: false
 class: text-left
