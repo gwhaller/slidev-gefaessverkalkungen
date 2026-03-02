@@ -6,21 +6,30 @@
       "type": "shell",
       "command": "git pull --rebase && git submodule update --init --recursive",
       "problemMatcher": [],
-      "presentation": { "reveal": "always", "panel": "dedicated" }
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     },
     {
       "label": "Git: Assets Push (public/assets)",
       "type": "shell",
       "command": "cd public/assets && git status && git add -A && git commit -m \"update assets\" || true && git push",
       "problemMatcher": [],
-      "presentation": { "reveal": "always", "panel": "dedicated" }
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     },
     {
       "label": "Git: Main Push (submodule pointer)",
       "type": "shell",
       "command": "git status && git add public/assets && git commit -m \"update assets pointer\" || true && git push",
       "problemMatcher": [],
-      "presentation": { "reveal": "always", "panel": "dedicated" }
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     },
     {
       "label": "Slidev: Dev",
@@ -28,14 +37,20 @@
       "command": "npm run dev",
       "isBackground": true,
       "problemMatcher": [],
-      "presentation": { "reveal": "always", "panel": "dedicated" }
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     },
     {
       "label": "Slidev: Build",
       "type": "shell",
       "command": "npm run build",
       "problemMatcher": [],
-      "presentation": { "reveal": "always", "panel": "dedicated" }
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     },
     {
       "label": "Slidev: Serve dist (offline)",
@@ -43,7 +58,10 @@
       "command": "npx serve dist",
       "isBackground": true,
       "problemMatcher": [],
-      "presentation": { "reveal": "always", "panel": "dedicated" }
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }
