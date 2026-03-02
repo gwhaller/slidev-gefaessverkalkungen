@@ -1,3 +1,32 @@
+# Übersicht
+
+Evolution
+Wald
+Ur-Karotte
+Walderdbeeren
+Nahrung überwiegend tierisch: Proteine und Fett
+Artikel im Ärzteblatt
+wir essen zu viele Kohlenhydrate/Zucker
+Kohlenhydrate = stärke = Zucker: SÜßigkeiten, Getreide/brot, nudeln, kartoffeln, Obst
+
+Was macht Zucker mit unserem Körper?
+Karamelisiert die Gefäßinnenwand und der Blutkörperchen /HbA1c
+Diagramme:
+
+- Beeren ohne Insulin - Tod, Zucker wertlos bzw schädigend
+  Insulin: schleust Zucker in die Zellen, läßt überschüssigen Zucker zu Fett umwandeln, verhindet Fettabbau
+  Insulin hoch: fettabbau blockiert, Fettanbau möglich - Insulin niedrig: Fettabbau möglich
+  Bild vom Mädchen
+- Beeren mit Insulin
+- Nudeln mit Insulin - Unterzucker / Heißhunger - Insulin baut sich auf: Garant für die Gewichtszunahem und verhindert Gewichtsabnahme
+- Mehrere Mahlzeiten mit Insulin
+  Theoretisch mößen wir alle extrem dick werden. Genetik - irgenwann: ich esse doch eigentlich nicht so viel (voller Eimer)
+- Pärchen
+- Jojo-Effekt: Weniger Kohlenhydrate, kein Fett = keine Energie - Insulin: kein Fettabbau
+- Proteine und Fett, kaum Insulin
+
+Wie kammen wir dahin?
+
 ---
 title: -- Gesundheit ist Eigenverantwortung
 layout: center
