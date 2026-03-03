@@ -28,6 +28,39 @@ Diagramme:
 Wie kammen wir dahin?
 
 ---
+
+# Was mach Zucker mit unserem Körper?
+
+---
+title: evolution
+layout: image
+image: /assets/images/evolution.png
+backgroundSize: 80%
+---
+
+<div class="abs-bl left-1/2 -translate-x-1/2 w160 h32  bg-white font-bold text-blue-700 text-5xl justify-center py-8 mb-4 flex">... macht uns krank?</div>
+
+---
+title: wald
+layout: image
+image: /assets/images/waldfluss.jpg
+backgroundSize: cover
+---
+
+---
+title: urgemüse
+---
+
+<img src="/assets/images/urkarotte.jpg" class="w-100 rel-tl"/>
+
+---
+title: diabetesmaedchen
+layout: image
+image: /assets/images/diabetsmaedchen.jpg
+backgroundSize: contain
+---
+
+---
 title: -- Gesundheit ist Eigenverantwortung
 layout: center
 class: text-center text-6xl
