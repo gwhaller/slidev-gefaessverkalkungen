@@ -48,6 +48,13 @@ backgroundSize: cover
 ---
 
 ---
+title: dick oder dünn
+layout: image
+image: /assets/images/dickoduenn.jpg
+backgroundSize: contain
+---
+
+---
 title: urgemüse
 ---
 
