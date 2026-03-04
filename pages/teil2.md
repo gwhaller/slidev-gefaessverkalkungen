@@ -56,7 +56,7 @@ title: urgemüse
 ---
 title: diabetesmaedchen
 layout: image
-image: /assets/images/diabetsmaedchen.jpg
+image: /assets/images/diabetesmaedchen.jpg
 backgroundSize: contain
 ---
 
