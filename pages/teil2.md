@@ -51,7 +51,8 @@ backgroundSize: cover
 title: urgemüse
 ---
 
-<img src="/assets/images/urkarotte.jpg" class="w-100 rel-tl"/>
+<img src="/assets/images/urkarotte.jpg" class="w-100 abs-tl mt-20"/>
+<img src="/assets/images/hoehlenmalerei.jpg" class="w-132 abs-tr mt-20"/>
 
 ---
 title: diabetesmaedchen
