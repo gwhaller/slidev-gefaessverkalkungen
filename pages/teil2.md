@@ -29,6 +29,30 @@ Wie kammen wir dahin?
 
 ---
 
+# Ohne Kohlenhydrate
+
+<bzohne />
+
+---
+
+# unverarbeitetes Essen
+
+<bzniedrig />
+
+---
+
+# hochverarbeitetes Essen
+
+<bzhoch />
+
+---
+
+# mehrere Mahlzeiten
+
+<bzviele />
+
+---
+
 # Was mach Zucker mit unserem Körper?
 
 ---
