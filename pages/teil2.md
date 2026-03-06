@@ -28,34 +28,6 @@ Diagramme:
 Wie kammen wir dahin?
 
 ---
-
-# Ohne Kohlenhydrate
-
-<bzohne />
-
----
-
-# unverarbeitetes Essen
-
-<bzniedrig />
-
----
-
-# hochverarbeitetes Essen
-
-<bzhoch />
-
----
-
-# mehrere Mahlzeiten
-
-<bzviele />
-
----
-
-# Was mach Zucker mit unserem Körper?
-
----
 title: evolution
 layout: image
 image: /assets/images/evolution.png
@@ -65,17 +37,33 @@ backgroundSize: 80%
 <div class="abs-bl left-1/2 -translate-x-1/2 w160 h32  bg-white font-bold text-blue-700 text-5xl justify-center py-8 mb-4 flex">... macht uns krank?</div>
 
 ---
+
+<div class="mb-4">
+  <span class="text-4xl font-bold">ohne Kohlenhydrate </span>
+  <span v-click class="*:size-12 *:mx-2 text-4xl">
+    <twemoji-cut-of-meat />
+    <emojione-v1-fish />
+    <twemoji-cheese-wedge />
+    <emojione-egg />
+  </span>
+</div>
+
+<bzohne />
+
+---
+title: Fastenrekord
+layout: image
+image: /assets/images/fastenrekord.jpg
+backgroundSize: 60%
+---
+
+## Angus Barbieri - 382 Tage lang gefastet
+
+---
 title: wald
 layout: image
 image: /assets/images/waldfluss.jpg
 backgroundSize: cover
----
-
----
-title: dick oder dünn
-layout: image
-image: /assets/images/dickoduenn.jpg
-backgroundSize: contain
 ---
 
 ---
@@ -86,10 +74,105 @@ title: urgemüse
 <img src="/assets/images/hoehlenmalerei.jpg" class="w-132 abs-tr mt-20"/>
 
 ---
-title: diabetesmaedchen
+
+<div class="mb-4">
+  <span class="text-4xl font-bold">unverarbeitetes Essen </span>
+  <span v-click class="*:size-12 *:mx-2 text-4xl">
+    <twemoji-cut-of-meat />
+    <twemoji-potato />
+  </span>
+</div>
+
+<bzniedrig />
+
+---
+
+<div class="mb-4">
+  <span class="text-4xl font-bold">verarbeitetes Essen </span>
+  <span v-click class="*:size-12 *:mx-2 text-4xl">
+  <emojione-baguette-bread />
+  <emojione-pancakes />
+  <emojione-spaghetti />
+  <emojione-hamburger />
+  <emojione-pizza />
+  <twemoji-banana />
+  </span>
+</div>
+
+<bzhoch />
+
+---
+
+# mehrere Mahlzeiten
+
+<bzviele />
+
+<v-clicks>
+
+<twemoji-bowl-with-spoon class="size-10 abs-bl bottom-36 left-22"/>
+<twemoji-croissant class="size-10 abs-bl bottom-36 left-50"/>
+<emojione-spaghetti class="size-10 abs-bl bottom-36 left-80"/>
+<twemoji-banana class="size-10 abs-bl bottom-36 left-120"/>
+<emojione-pizza class="size-10 abs-bl bottom-36 left-150"/>
+
+</v-clicks>
+
+---
+title: Blutzucker
+layout: two-cols-header
+---
+
+<span class="text-4xl">Was macht <span class="text-red">Zucker</span> mit unserem Körper?</span>
+
+::left::
+
+- Ausschüttung von Insulin
+- Kann zu Ablagerungen an den Gefäßen führen
+
+- Bluthochdruck
+
+::right::
+
+<img src="/assets/images/glykokalyx1.png" class="w-120 mb-14" />
+
+---
+title: Glykokalyx2
+layout: two-cols-header
+image: "/assets/images/glykokalyx.png"
+---
+
+# Glykokalyx
+
+::left::
+
+<img src="/assets/images/glykokalyx2.png" class="w-100"/>
+
+::right::
+
+<img src="/assets/images/glykokalyx3.png" class="w-100 mb-25"/>
+
+---
+title: Insulin-Wirkung
+layout: two-cols-header
+---
+
+<span class="text-4xl">Was macht <span class="text-blue-4">Insulin</span> mit unserem Körper?</span>
+
+::left::
+
+- Speicher- und Wachstumshormon
+  - Umwandlung von Zucker in Fett
+- Verhindert den Fettabbau
+
+::right::
+
+<img src="/assets/images/diabetesmaedchen.jpg" class="mb-14" />
+
+---
+title: dick oder dünn
 layout: image
-image: /assets/images/diabetesmaedchen.jpg
-backgroundSize: contain
+image: /assets/images/dickoduenn.jpg
+backgroundSize: 60%
 ---
 
 ---
