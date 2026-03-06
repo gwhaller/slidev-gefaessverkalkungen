@@ -1,31 +1,17 @@
-# Übersicht
+---
+title: Motivation
+---
 
-Evolution
-Wald
-Ur-Karotte
-Walderdbeeren
-Nahrung überwiegend tierisch: Proteine und Fett
-Artikel im Ärzteblatt
-wir essen zu viele Kohlenhydrate/Zucker
-Kohlenhydrate = stärke = Zucker: SÜßigkeiten, Getreide/brot, nudeln, kartoffeln, Obst
+## Meine Motivation:
 
-Was macht Zucker mit unserem Körper?
-Karamelisiert die Gefäßinnenwand und der Blutkörperchen /HbA1c
-Diagramme:
-
-- Beeren ohne Insulin - Tod, Zucker wertlos bzw schädigend
-  Insulin: schleust Zucker in die Zellen, läßt überschüssigen Zucker zu Fett umwandeln, verhindet Fettabbau
-  Insulin hoch: fettabbau blockiert, Fettanbau möglich - Insulin niedrig: Fettabbau möglich
-  Bild vom Mädchen
-- Beeren mit Insulin
-- Nudeln mit Insulin - Unterzucker / Heißhunger - Insulin baut sich auf: Garant für die Gewichtszunahem und verhindert Gewichtsabnahme
-- Mehrere Mahlzeiten mit Insulin
-  Theoretisch mößen wir alle extrem dick werden. Genetik - irgenwann: ich esse doch eigentlich nicht so viel (voller Eimer)
-- Pärchen
-- Jojo-Effekt: Weniger Kohlenhydrate, kein Fett = keine Energie - Insulin: kein Fettabbau
-- Proteine und Fett, kaum Insulin
-
-Wie kammen wir dahin?
+- bin Schulmediziner und war Wissenschaftler
+- lebenslage Gewichtsprobleme
+- schließlich Mangelernährung
+- Nährstoffmängel auch bei Patienten
+- Covid
+- Selbstexperimente mit Vit-D
+- warum weis ich das nicht?
+- Ernährung Literatur - keine Wissenschaft - Hierarchie
 
 ---
 title: evolution
@@ -35,6 +21,84 @@ backgroundSize: 80%
 ---
 
 <div class="abs-bl left-1/2 -translate-x-1/2 w160 h32  bg-white font-bold text-blue-700 text-5xl justify-center py-8 mb-4 flex">... macht uns krank?</div>
+
+---
+title: -- Gesundheit ist Eigenverantwortung
+layout: center
+class: text-center text-6xl
+---
+
+# <span class="text-6xl">Gesundheit</span>
+
+<div class="text-3xl m-8">ist</div>
+
+# <span class="text-6xl">Eigenverantwortung</span>
+
+---
+title: diabetiker
+layout: two-cols-header
+---
+
+# Beobachtungen aus der Praxis
+
+::left::
+
+<v-clicks>
+
+- Diabetiker haben alle Arterienverkalkung
+- auch Nichtdiabetiker können betroffen sein
+
+</v-clicks>
+
+::right::
+
+<img src="/assets/images/zuckerwuerfel.jpg" class="mx-auto mt-4 w-180"/>
+
+---
+
+## Was ist Diabetes mellitus?
+
+<v-clicks>
+
+Diabetes mellitus (Zuckerkrankheit) ist eine chronische Stoffwechselerkrankung, die durch einen dauerhaft erhöhten Blutzuckerspiegel (Hyperglykämie) aufgrund von Insulinmangel, Insulinresistenz oder beidem gekennzeichnet ist. Sie führt zu Glukoseausscheidung im Urin, verursacht Symptome wie Durst und häufiges Wasserlassen und erhöht das Risiko für Folgeerkrankungen an Nerven und Gefäßen.
+
+### = dauerhaft erhöhter <span class="text-red-4">Zucker</span>-Spiegel
+
+<br/>
+
+## Diabetes Typ I <span class="ml-5"><mdi-arrow-down-thin class="text-2l" /><span class="text-blue-4">Insulin</span></span>
+
+## <span v-mark.underline.red="6">Diabetes Typ II</span> <span class="ml-3"><mdi-arrow-up-thin class="text-2l" /><span class="text-blue-4">Insulin</span></span>
+
+</v-clicks>
+
+---
+title: Insulin
+layout: two-cols
+---
+
+# Was ist <span class="text-blue-4">Insulin</span>?
+
+<br/>
+
+<v-clicks>
+
+- Speicher- und Wachstumshormon
+- Überschuss an Zucker als Fett eingespeichert
+- Verhindert den Fettabbau
+
+</v-clicks>
+
+::right::
+
+<img src="/assets/images/diabetesmaedchen.jpg" class="mx-auto mt-16 w-180"/>
+
+---
+title: dick oder dünn
+layout: image
+image: /assets/images/dickoduenn.jpg
+backgroundSize: 60%
+---
 
 ---
 
@@ -51,13 +115,12 @@ backgroundSize: 80%
 <bzohne />
 
 ---
-title: Fastenrekord
-layout: image
-image: /assets/images/fastenrekord.jpg
-backgroundSize: 60%
----
 
-## Angus Barbieri - 382 Tage lang gefastet
+# Angus Barbieri
+
+## 382 Tage lang gefastet
+
+<img src="/assets/images/Angus_Barbieri.jpg" class="mx-auto mt-4 w-180"/>
 
 ---
 title: wald
@@ -118,6 +181,13 @@ title: urgemüse
 </v-clicks>
 
 ---
+title: Ärzteblatt
+layout: image
+image: /assets/images/aerzteblatt.png
+backgroundSize: 38%
+---
+
+---
 title: Blutzucker
 layout: two-cols-header
 ---
@@ -128,8 +198,11 @@ layout: two-cols-header
 
 - Ausschüttung von Insulin
 - Kann zu Ablagerungen an den Gefäßen führen
-
 - Bluthochdruck
+- Herzrhythmusstörungen
+- Müdigkeit
+- Gliederschmerzen
+- Hautveränderungen
 
 ::right::
 
@@ -152,40 +225,32 @@ image: "/assets/images/glykokalyx.png"
 <img src="/assets/images/glykokalyx3.png" class="w-100 mb-25"/>
 
 ---
-title: Insulin-Wirkung
-layout: two-cols-header
+title: prä-diabetiker
+layout: two-cols
 ---
 
-<span class="text-4xl">Was macht <span class="text-blue-4">Insulin</span> mit unserem Körper?</span>
+# Diabetiker
 
-::left::
-
-- Speicher- und Wachstumshormon
-  - Umwandlung von Zucker in Fett
-- Verhindert den Fettabbau
+- nüchtern <span class="text-red-4">Blutzucker</span> hoch
+- "normal" im Alter
 
 ::right::
 
-<img src="/assets/images/diabetesmaedchen.jpg" class="mb-14" />
+# Prä-Diabetiker
 
----
-title: dick oder dünn
-layout: image
-image: /assets/images/dickoduenn.jpg
-backgroundSize: 60%
----
-
----
-title: -- Gesundheit ist Eigenverantwortung
-layout: center
-class: text-center text-6xl
----
-
-# <span class="text-6xl">Gesundheit</span>
-
-<div class="text-3xl m-8">ist</div>
-
-# <span class="text-6xl">Eigenverantwortung</span>
+- nüchtern <span class="text-red-4">Blutzucker</span> normal
+  - häufige Kohlenhydrat-Mahlzeiten
+  - heißhunger
+  - Abneigung gegen deftigem Essen
+  - Müdigkeit
+  - Verdauungsprobleme
+  - hoher Blutdruck / Blutdruckmedikamenten
+  - Herzrhythmusstörungen
+  - Gliederschmerzen
+  - Hautveränderungen
+  - Gicht
+  - Übergewicht, insbesondere Bauchfett
+  - Labor: Triglyceridd, HOMA-Index
 
 ---
 title: meiden
@@ -217,7 +282,7 @@ title: Was ist gesunde Ernährung ?
 
 <br><br>
 
-# Was ist gesunde Ernährung ?
+# Was soll man überhaupt noch essen ?
 
 ---
 title: Das Problem mit den Ernährungsempfehlungen
@@ -477,30 +542,6 @@ backgroundSize: contain
 ---
 
 ---
-title: -- Das Problem mit der Genetik
----
-
-<br><br>
-
-## Das Problem mit der
-
-# **Genetik**
-
----
-title: Massai
-layout: image
-image: /assets/images/massai.jpg
-backgroundSize: contain
----
-
----
-title: Inuit
-layout: image
-image: /assets/images/inuit.jpg
-backgroundSize: contain
----
-
----
 title: -- Das Problem mit den Studien
 ---
 
@@ -577,607 +618,6 @@ image: /assets/images/roulette.jpg
 </v-clicks>
 
 ---
-title: -- Das Problem mit den sekundären Pflanzenstoffen
----
-
-<br><br>
-
-## Das Problem mit den
-
-# **sekundären Pflanzenstoffen**
-
----
-title: Sekundäre Pflanzenstoffe
-layout: image
-image: /assets/images/sekundaerePflanzenstoffe.jpeg
-backgroundSize: 100%
----
-
----
-title: biochemie
-layout: image
-image: /assets/images/Biochemie.jpeg
-backgroundSize: 100%
----
-
----
-title: -- Das Problem mit den Nährstoffen
----
-
-<br><br>
-
-## Das Problem mit den
-
-# **Nährstoffen**
-
----
-layout: image-right
-image: /assets/images/baustoffe.webp
----
-
-# Proteine = Eiweiß
-
-<span class="*:size-12 *:mx-2">
-  <twemoji-cut-of-meat />
-  <emojione-v1-fish />
-  <fluent-emoji-flat-glass-of-milk />
-  <twemoji-cheese-wedge />
-  <emojione-egg />
-  <twemoji-beans />
-  <img src="/assets/icons/walnut.png" class="inline-block align-top"/>
-</span>
-
-<br>
-<br>
-
-### Baustoff
-
-#### kann nicht gespeichert werden
-
-<br>
-<v-clicks>
-
-- Reparatur
-- Organe, Muskeln, Knochen, Gelenke, Haut
-- Antikörper
-- Enzyme
-- Hormone
-- Transport
-- mind 0,8mg pro kg KG am Tag
-
-</v-clicks>
-
----
-
-## Eiweiß - Proteine
-
-<span class="*:size-12 *:mx-2">
-  <twemoji-cut-of-meat />
-  <emojione-v1-fish />
-  <fluent-emoji-flat-glass-of-milk />
-  <twemoji-cheese-wedge />
-  <emojione-egg />
-  <twemoji-beans />
-  <img src="/assets/icons/walnut.png" class="inline-block align-top"/>
-</span>
-
-<v-clicks>
-
-- Baumaterial
-- ca 20 % der Körpermasse
-- ca 50.000 verschiedene Eiweißstoffe im menschlichen Körper
-- Grundbausteine sind die 20 Aminosäuren
-- davon 9 Aminosäuren <span v-mark.underline.red="5">unentbehrlich</span> !
-  > Weizen fehlt es an der <span class="text-red-300 font-bold">Lysin</span><br>
-  > Hülsenfrüchten mangelt es an <span class="text-red-300 font-bold">Methionin</span>
-- Aufnahme behindert durch Magenschutztabletten
-- tgl ca 300 g Eiweiß recycled
-- überschüssige Eiweiße werden verbrannt
-
-</v-clicks>
-
-<img src="/assets/images/darm_eiweiss.jpg" class="abs-br w-130 p-4"/>
-
----
-title: Angst Fette
-layout: image
-image: /assets/images/panik.jpg
-backgroundSize: 150%
-clicks: 1
----
-
-<div v-if="$clicks === 1" class="abs-br mr-20 mb-16 !text-(shadow-lg 9xl) motion-preset-[pop slide-up focus] motion-delay-100 motion-preset-shake motion-delay-50">Fette</div>
-
----
-
-<div class="grid grid-cols-2 gap-4">
-
-<div>
-
-## Fett
-
-<br>
-
-<v-click>
-
-### gesättigte Fettsäuren
-
-</v-click>
-
-<div class="flex justify-between mb-20">
-  <div v-click=1 class="flex space-x-2xl *:size-12">
-    <img class="size-12" src="/assets/icons/butter2.png"/>
-    <noto-v1-bacon/>
-    <emojione-avocado/>
-    <twemoji-coconut/>
-  </div>
-  <div>
-    <span v-click class="mr-10">Brennstoff</span><br>
-    <span v-click v-mark.underline.red="3">Vitamine</span>
-  </div>
-</div>
-
-<v-click at=4>
-
-### ungesättigte Fettsäuren
-
-</v-click>
-
-<div class="flex justify-between">
-  <div v-click=4  class="flex space-x-2xl *:size-12">
-    <img src="/assets/icons/olive-oil.png"/>
-    <openmoji-olive/>
-    <emojione-v1-sunflower/>
-    <twemoji-fish/>
-  </div>
-  <div v-click=5 class="mr-10 pt-4">Chemikalien</div>
-</div>
-
-</div>
-
-<div>
-  <img src="/assets/images/kohle.webp" class="h-60"/>
-  <img src="/assets/images/putzmittel.avif" class="h-54 mt-4"/>
-</div>
-</div>
-
----
-title: gesättigte vs ungesättigte FS
----
-
-## Fette<span class="ml-4 space-x-2"><img class="size-12 inline" src="/assets/icons/butter2.png"/><noto-v1-bacon/><emojione-avocado/><twemoji-coconut/></span><br><br>
-
-<img src="/assets/images/butter.jpg" class="abs-tl w-80 mt-30 ml-14" />
-<img src="/assets/images/Öl.jpg" class="abs-tl w-80 mt-81 ml-14" />
-<img src="/assets/images/fettsaeure_ges.jpg" class="abs-tr w-120 h-45 mt-30 mr-14" />
-<img src="/assets/images/infachungesaettigte.jpg" class="abs-tr w-120 h-45 mt-81 mr-14" />
-<span class="abs-tr text-red-500 mr-30 mt-20 text-2xl font-bold">Fettsäuren</span>
-<span class="abs-tr text-red-500 mr-30 mt-30 text-2xl font-bold">gesättigt</span>
-<span class="abs-tr text-red-500 mr-30 mt-81 text-2xl font-bold">ungesättigt</span>
-<span class="abs-tr text-red-500 mr-30 mt-118 text-2xl font-bold">mehrfach ungesättigt</span>
-
----
-title: alle FS
----
-
-## Fette<span class="ml-4 space-x-2"><img class="size-12 inline" src="/assets/icons/butter2.png"/><noto-v1-bacon/><emojione-avocado/><twemoji-coconut/></span><br><br>
-
-<img src="/assets/images/Übersicht-Fettsäuren.jpg" class="abs-tl w-180 mt-30 ml-14" />
-<span class="abs-tr text-red-500 mr-10 mt-45 text-2xl font-bold">Brennstoff</span>
-<span class="abs-tr text-red-500 mr-12 mt-75 text-2xl font-bold">essentiell</span>
-
----
-title: Transfette
-layout: image-right
-image: /assets/images/transfette.avif
----
-
-## Transfette <emojione-v1-black-skull-cross-bones class="ml-6"/>
-
-<v-clicks>
-
-- Pommes, Chicken Wings, Krapfen
-- Sonnenblumenölmargarine
-- Chips, Cornflakes
-- Wurst
-- Fertigsuppen
-- Müsliriegel
-- Cappuccino-Pulver
-- <span v-mark.underline.red="8">Fertiggerichte</span>
-
-</v-clicks>
-
-<!--
-In Dänemark dürfen Lebensmittel bereits seit 15 Jahren nicht mehr als zwei Prozent Transfette enthalten. Seitdem ist die Zahl der Herzerkrankungen laut einer Studie deutlich zurückgegangen, um etwa 700 Todesfälle pro Jahr. In Deutschland gibt es derzeit keine gesetzlichen Regelungen für Transfette in Lebensmitteln.
--->
-
----
-title: Samenoel Herstellung
-layout: two-cols-header
----
-
-## Industriell hergestellte Samenöle (Sonnenblumenöl) <emojione-v1-black-skull-cross-bones class="ml-6"/>
-
-::left::
-
-<SlidevVideo autoplay>
-  <source src="/assets/videos/oel.mp4" type="video/mp4" />
-</SlidevVideo>
-
-::right::
-
-<div class="abs-tr mt-20">
-
-Herstellung:
-
-<v-clicks>
-
-- Presskuchen 140°C -> Öle
-- chemische Lösungsmittel -> Hexan/Waschbenzin
-- Phosphaten -> entschleimt
-- Natronlauge -> neutralisiert
-- Bleicherde
-- desodoriert -> 270°C /60 Min
-- Haltbarkeit -> TBHQ, BHT oder BHA
-
-</v-clicks>
-
-Es entstehen:
-
-<v-clicks>
-
-- schädliche Esterverbindungen und Aldehyde
-- Kohlenwasserstoffe (PAK)
-- stark oxidiertes Produkt
-
-</v-clicks>
-</div>
-
----
-title: Tabelle Omega 6
-layout: two-cols
-image: /assets/images/sonnenblumenöl.webp
-backgroundSize: 90%
----
-
-### mehrfach ungesättigte Fettsäuren
-
-#### Pflanzenöle
-
-<img src="/assets/images/sonnenblumenöl.webp" class="abs-bl w-90 mb-5 ml-14" />
-
-::right::
-
-<fluent-color-warning-16 class="text-xl abs-tr mt-42 mr-125" />
-
-| Öl             | Linolsäure | Omega 6/3 |
-| -------------- | ---------- | --------- |
-| Erdnussöl      | 28%        | 182:1     |
-| Distelöl       | 70%        | 160:1     |
-| Traubenkernöl  | 70%        | 135:1     |
-| Sonnenblumenöl | 66%        | 120:1     |
-| Kürbiskernöl   | 50%        | 110:1     |
-| Maiskaimöl     | 60%        | 50:1      |
-| Sesamöl        | 45%        | 22:1      |
-| Olivenöl       | 10%        | 10:1      |
-| Sojaöl         | 55%        | 8:1       |
-| Weizenkeimöl   | 50%        | 7:1       |
-| Walnussöl      | 50%        | 4:1       |
-| Leinenöl       | 50%        | 3:1       |
-| Hanföl         | 50%        | 3:1       |
-| Rapsöl         | 20%        | 3:1       |
-| Reiskleieöl    | 30%        | 1:3       |
-
-<style>
-th, td {
-  font-size: 12px;
-  padding: 6px;
-  text-align: left;
-}
-tr:nth-child(n+1):nth-child(-n+6) {color: LightPink}
-</style>
-
----
-title: FS vs Cholesterin
----
-
-## Cholesterin
-
-<img src="/assets/images/vgl_trigl_chol.jpg" class="abs-tl w-180 mt-30 ml-14" />
-
----
-
-## Cholesterin
-
-- wird in der Leber produziert
-- notwendiger Baustein der Zellmembran
-- unverzichtbar bei der Verdauung
-- Grundbaustein bei der Hormonproduktion
-- Bildung von Vitamin-D
-- das Gehirn besteht zu 25% aus Cholesterin
-
----
-
-## Lipoproteine
-
-<v-clicks>
-
-<img src="/assets/images/fett_wasser.jpg" class="abs-tl w-100 mt-20 ml-14" />
-<img src="/assets/images/Aufbau-Lipo.jpg" class="abs-bl w-100 mb-3 ml-14" />
-<img src="/assets/images/lipoproteine.webp" class="abs-tr w-100 h-55 mt-20 mr-14" />
-
-<SlidevVideo autoplay class="abs-br w-100 mb-3 mr-14">
-  <source src="/assets/videos/zellmembran.mp4" type="video/mp4" />
-</SlidevVideo>
-
-</v-clicks>
-
----
-title: Lipoprotein Kreislauf
----
-
-## Lipoproteine
-
-### Kreislauf
-
-<img src="/assets/images/bad_lp.png" class="abs-tl w-114 mb-3 ml-12" />
-<img src="/assets/images/Lipoproteinen.jpg" class="abs-tr w-100 mt-38 mr-14" />
-
----
-title: oxLDL
----
-
-## Lipoproteine
-
-<span>Zuckerreiche Ernähung</span>
-
-<v-clicks>
-
-<img src="/assets/images/ldl_typb.jpg" class="abs-tl w-90 mt-30 ml-14" />
-<img src="/assets/images/gef_wand_1.jpg" class="abs-tr w-90 mt-30 mr-14" />
-<img src="/assets/images/oxy_ldl2.jpg" class="abs-bl w-90 h-51 mb-5 ml-14" />
-<img src="/assets/images/gef_wand_2.jpg" class="abs-br w-90 mb-5 mr-14" />
-
-</v-clicks>
-
----
-title: Schaumzellen
----
-
-## Lipoproteine
-
-<img src="/assets/images/chol_plaque.jpg" class="abs-tl w220 mt-25 ml-14" />
-
----
-title: neues Model ox-LDL
-layout: image
-image: /assets/images/ox-LDL.jpg
-backgroundSize: 70%
----
-
----
-title: -- Das Problem mit den Kohlenhydraten
----
-
-<br><br>
-
-## Das Problem mit den
-
-# **Kohlenhydraten / Zucker**
-
----
-layout: image-right
-image: /assets/images/papier.avif
----
-
-## Kohlenhydrate
-
-<div class="*:size-12 *:m-2" >
-  <emojione-baguette-bread />
-  <emojione-croissant />
-  <emojione-pancakes />
-  <noto-cooked-rice />
-  <emojione-spaghetti />
-  <emojione-hamburger />
-  <emojione-pizza />
-  <twemoji-banana />
-  <streamline-emojis-candy />
-  <img src="/assets/icons/ketchup.png" class="inline-block align-top"/>
-  <noto-beverage-box />
-  <img src="/assets/icons/cola.png" class="inline-block align-top"/>
-</div>
-
-<br>
-<br>
-
-### Brennstoff
-
-#### Schnell verfügbare Energie
-
-#### Speicherbar
-
-<v-clicks depth="2">
-
-- Leber (kurzfristige Energie ca 90 Min)
-- Fett (langfristig)
-
-</v-clicks>
-
----
-
-## Kohlenhydrate
-
-<div class="*:size-12 *:m-2" >
-  <emojione-baguette-bread />
-  <emojione-croissant />
-  <emojione-pancakes />
-  <noto-cooked-rice />
-  <emojione-spaghetti />
-  <emojione-hamburger />
-  <emojione-pizza />
-  <twemoji-banana />
-  <streamline-emojis-candy />
-  <img src="/assets/icons/ketchup.png" class="inline-block align-top"/>
-  <noto-beverage-box />
-  <img src="/assets/icons/cola.png" class="inline-block align-top"/>
-</div>
-<br><br>
-
-### Natürlich vorkommende Kohlenhydrate
-
-<img src="/assets/images/gute-kh.webp" class="abs-bl w-110 m-6 ml-10"/>
-<img src="/assets/images/verdauung_kohlenhydrate.jpg" class="abs-br w-110 m-6 mr-10"/>
-
----
-
-## Kohlenhydrate
-
-<div class="*:size-12 *:m-2" >
-  <emojione-baguette-bread />
-  <emojione-croissant />
-  <emojione-pancakes />
-  <noto-cooked-rice />
-  <emojione-spaghetti />
-  <emojione-hamburger />
-  <emojione-pizza />
-  <twemoji-banana />
-  <streamline-emojis-candy />
-  <img src="/assets/icons/ketchup.png" class="inline-block align-top"/>
-  <noto-beverage-box />
-  <img src="/assets/icons/cola.png" class="inline-block align-top"/>
-</div>
-<br>
-
-### Raffinierte Kohlenhydrate
-
-#### Zucker = Mehl
-
-<img src="/assets/images/raffinierte-kh.jpg" class="abs-bl w-93 m-6 ml-10"/>
-<div class="relativ">
-  <img src="/assets/images/verdauung_zucker.jpg" class="abs-br w-110 m-6 mr-10"/>
-</div>
-
----
-title: Insulin
----
-
-## Kohlenhydrate<span class="ml-4 space-x-2"><emojione-baguette-bread class="size-12"/><img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-12"/></span>
-
-### <br>Zucker
-
-<v-clicks>
-
-- bevorzugte Energiequelle <twemoji-thinking-face class="size-8 ml-2" />
-- kann Gewebestrukturen schädigen<br>
-  -- karamellisieren (HbA1c)
-
-</v-clicks>
-
-### <br>Insulin
-
-<v-clicks>
-
-- Masthormon
-- schleust Zucker in die Zelle
-- fördert die Bildung von Fett
-- verhindert den Fettabbau
-
-</v-clicks>
-
-<img v-if="$clicks >= 2" src="/assets/images/Apfel-Karamell.png" class="abs-tr w-50 mt-14 mr-70"/>
-<!-- <img v-if="$clicks >= 2" src="/assets/images/zellmembran.gif" class="abs-tr w-45 mt-14 mr-20"/> -->
-<!-- <img src="/assets/images/insulinrezeptor.jpg" class=" abs-br w-100 m-6 mr-20" v-if="$clicks === 7" /> -->
-<img src="/assets/images/insulinrezeptor2.jpg" class=" abs-br w-100 h-70 m-6 mr-20" v-if="$clicks >= 2" />
-
----
-title: Nüchtern-BZ
----
-
-## Kohlenhydrate<span class="ml-4 space-x-2"><emojione-baguette-bread class="size-12"/><img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-12"/></span><br><br>
-
-<oui-dot class="text-green-500 absolute text-3xl left-10 top-44" v-click="1" />
-<oui-dot class="text-yellow-500 absolute text-3xl left-10 top-78"  v-click="2"/>
-<oui-dot class="text-red-500 absolute text-3xl left-10 top-94"  v-click="3" />
-
-### moderater Zucker- und Mehl-Konsum<img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-6 ml-2"/><br>
-
-<v-click>
-
-- Nüchtern Insulin und Blutzucker im Normbereich<br>
-  <span class="ml-4">= gesund</span>
-
-</v-click>
-
-### <br>erhöhter Konsum<img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-6 ml-2"/><img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-6 ml-2"/><img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-6 ml-2"/>
-
-<v-click>
-
-- nüchtern-Insulin<mdi-arrow-up-thin class="text-xl" /> (bis 10x) Blutzucker normal<br>
-  <span class="ml-4">= Prä-Diabetes <span v-mark.underline.red="2">(viele Jahre unentdeckt)</span></span>
-
-</v-click>
-<v-click>
-
-- nüchtern-Insulin<mdi-arrow-up-thin class="text-xl" /> -Blutzucker<mdi-arrow-up-thin class="text-xl" /> <br>
-  <span class="ml-4">= Diabetes</span>
-
-</v-click>
-
-<div class="abs-br">
-  <el-arrow-up v-if="$clicks >= 2" class="absolute text-blue-500 top-40 left-70 size-12 motion-translate-y-loop-25"/>
-  <img src="/assets/images/insulin_kurve.png" class=" w-95 mr-20 mb-20" />
-</div>
-
----
-title: Ärzteblatt
-layout: image
-image: /assets/images/aerzteblatt.png
-backgroundSize: 38%
----
-
----
-title: Prädiabetes
----
-
-## Kohlenhydrate<span class="ml-4 space-x-2"><emojione-baguette-bread class="size-12"/><img src="/assets/icons/wuerfelzucker.png" class="inline-block align-top size-12"/></span>
-
-## Prä-Diabetes
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-### <span class="text-red-300">Symptome</span>
-
-<v-clicks>
-
-- Gewichtszunahme
-- Heißhunger
-- Schwäche
-- Müdigkeit
-- Erhöhte Neigung zu Infektionen (Haut, Genitale, Harnwege)
-- Verzögerte Wundheilung
-- ...
-
-</v-clicks>
-
-</div>
-<div>
-
-### <span class="text-red-300">Folgen</span>
-
-<v-clicks>
-
-- Bluthochdruck
-- Fettstoffwechselstörungen
-- Arterienverkalkungen
-- Diabetes
-
-</v-clicks>
-
-</div>
-</div>
-
----
 title: Zuckersucht
 layout: image-right
 image: /assets/images/zuckersucht.avif
@@ -1221,63 +661,6 @@ title: Intervallfasten
 layout: image
 image: /assets/images/intervallfasten2.jpg
 ---
-
----
-title: -- Das Problem mit der Energie
----
-
-<br><br>
-
-## Das Problem mit der
-
-# Energie
-
----
-title: KH vs Fett
-layout: two-cols
----
-
-<p class="text-2xl">Fette</p>
-<img src="/assets/images/kokosoel.jpg" class="w-90" />
-<img src="/assets/images/TierischeFette.jpg" class="mt-5 w-90" />
-
-::right::
-
-<p class="text-2xl">Kohlenhydrate</p>
-<img src="/assets/images/kohlenhydrate.webp" class="w-90 h-50" />
-<img src="/assets/images/milch.jpg" class="mt-5 w-90 h-52" />
-
----
-title: Vegan vs Karnivore
-layout: two-cols-header
-tclicks: 7
----
-
-<p class="text-center text-5xl">Ernährung</p>
-<p class="text-center text-3xl">2 Extreme</p>
-
-::left::
-
-<div>
-  <p class="text-center text-4xl">vegan &nbsp;<twemoji-broccoli /></p>
-  <v-click>
-    <PieChart :percentages="[70, 20, 10]" :open="$clicks >= 1" />
-    <div v-mark="{ at: 2, color: 'red', type: 'circle', strokeWidth: '4' }" class="relative bottom-24 left-52 w-42 h-8" />
-  </v-click>
-</div>
-
-::right::
-
-<div>
-  <p class="text-center text-4xl">karnivore &nbsp;<twemoji-cut-of-meat /></p>
-  <PieChart v-click="3" :percentages="[5,40, 55]" :shrink="$clicks >= 7" :open="$clicks >= 3" />
-  <div v-mark="{ at: 4, color: 'yellow', type: 'circle', strokeWidth: '4' }" class="relative bottom-8 left-52 w-28 h-8" />
-  <div v-mark="{ at: 5, color: 'blue', type: 'circle', strokeWidth: '4' }" class="relative bottom-24 left-52 w-30 h-8" />
-  <div class="relative text-2xl bottom-6" >
-    <span v-click="6">hohe Nährstoffdichte</span>
-    <span v-click="7"> = weniger Hunger</span>
-  </div>
-</div>
 
 ---
 layout: two-cols
