@@ -83,9 +83,13 @@ layout: two-cols
 
 <v-clicks>
 
-- Speicher- und Wachstumshormon
-- Überschuss an Zucker als Fett eingespeichert
-- Verhindert den Fettabbau
+Speicher- und Wachstumshormon
+
+- Lässt <span class="text-red-4">Zucker</span> in die Körperzellen
+- Überschuß an <span class="text-red-4">Zucker</span> als Fett eingespeichert
+- blockiert den Fettabbau
+
+Sorgt für einen niedrig stabilen Blutzucker
 
 </v-clicks>
 
@@ -149,8 +153,11 @@ title: urgemüse
 <bzniedrig />
 
 ---
+title: vergleich
+clicks: 2
+---
 
-<div class="mb-4">
+<div v-if="$clicks <= 1" class="mb-4">
   <span class="text-4xl font-bold">verarbeitetes Essen </span>
   <span v-click class="*:size-12 *:mx-2 text-4xl">
   <emojione-baguette-bread />
@@ -162,7 +169,57 @@ title: urgemüse
   </span>
 </div>
 
-<bzhoch />
+<h1 
+  v-if="$clicks >= 2" 
+  v-motion
+  :initial="{ scale: 0, opacity: 0 }"
+  :click-2="{ scale: 1, opacity: 1, transition: { duration: 600, delay: 600 } }"
+  class="text-4xl font-bold mb-4"
+>Vergleich</h1>
+
+<div v-if="$clicks <= 1">
+  <bzhoch />
+</div>
+
+<div v-if="$clicks >= 2" class="relative w-full h-full flex items-center justify-center">
+  <!-- bzhoch with title: starts full size, shrinks to middle-right on click 2 -->
+  <div 
+    v-motion
+    :initial="{ scale: 1, x: 0, y: 0 }"
+    :click-2="{ scale: 0.5, x: 180, y: 0, transition: { duration: 600 } }"
+    class="absolute"
+  >
+    <div class="mb-4">
+      <span class="text-4xl font-bold">verarbeitetes Essen </span>
+      <span class="*:size-12 *:mx-2 text-4xl">
+      <emojione-baguette-bread />
+      <emojione-pancakes />
+      <emojione-spaghetti />
+      <emojione-hamburger />
+      <emojione-pizza />
+      <twemoji-banana />
+      </span>
+    </div>
+    <bzhoch />
+  </div>
+  
+  <!-- bzniedrig with title: enters from left outside viewport, shrinks to middle-left -->
+  <div 
+    v-motion
+    :initial="{ scale: 1, x: -500, y: 0, opacity: 0 }"
+    :click-2="{ scale: 0.5, x: -180, y: 0, opacity: 1, transition: { duration: 600, delay: 600 } }"
+    class="absolute"
+  >
+    <div class="mb-4">
+      <span class="text-4xl font-bold">unverarbeitetes Essen </span>
+      <span class="*:size-12 *:mx-2 text-4xl">
+      <twemoji-cut-of-meat />
+      <twemoji-potato />
+      </span>
+    </div>
+    <bzniedrig />
+  </div>
+</div>
 
 ---
 
@@ -179,6 +236,39 @@ title: urgemüse
 <emojione-pizza class="size-10 abs-bl bottom-36 left-150"/>
 
 </v-clicks>
+
+---
+
+# Insulinresistenz
+
+- Der körper kann nicht mehr auf das überhöhte <span class="text-blue-4">Insulin</span> hören
+
+- Die körperzellen können kein <span class="text-red-4">Zucker</span> mehr aufnehmen
+
+## <span class="text-blue-4">Insulin</span> <span class="ml-5"><mdi-arrow-up-thin class="text-2l" /></span>
+
+## <span class="text-red-4">Blutzucker</span><span class="ml-5"><mdi-arrow-up-thin class="text-2l" /></span>
+
+---
+title: Zuckeranimation
+clicks: 11
+---
+
+# Zucker und Fettstoffwechsel
+
+<div class="flex flex-col items-center justify-center my-8">
+  <div class="w-[480px] h-auto flex items-center justify-center">
+    <sugar :clicks="$clicks" class="w-full h-auto" style="max-width:100%; height:auto;" />
+  </div>
+</div>
+
+<div
+  class="absolute bottom-16 left-8 text-3xl font-sans leading-tight"
+  style="color: #ff8888;"
+  :style="{ opacity: $clicks >= 7 ? 1 : 0, transition: 'opacity 0.6s ease 1s' }"
+>
+  Insulin-<br>Resistenz
+</div>
 
 ---
 title: Ärzteblatt
@@ -251,6 +341,52 @@ layout: two-cols
   - Gicht
   - Übergewicht, insbesondere Bauchfett
   - Labor: Triglyceridd, HOMA-Index
+
+---
+clicks: 4
+---
+
+# Ernährungsempfehlung
+
+<div class="grid grid-cols-2 gap-13 mx-auto w-full max-w-4xl mt-16 px-8">
+  <!-- Oben links: Backstein Bild + Grüner Kreis Proteine -->
+  <div class="flex items-center justify-center gap-4">
+    <img src="/assets/images/baustoffe.webp" class="w-24 h-24 object-cover rounded transition-opacity duration-500" :style="{ opacity: $clicks >= 3 ? 0 : 1 }" />
+    <div class="w-32 h-32 rounded-full bg-green-400 flex items-center justify-center">
+      <span class="text-white text-2xl font-bold text-center" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">Proteine</span>
+    </div>
+  </div>
+  
+  <!-- Oben rechts: Gelber Kreis Fett + Kohle Bild -->
+  <div class="flex items-center justify-center gap-4">
+    <div class="w-32 h-32 rounded-full bg-yellow-400 flex items-center justify-center transition-transform duration-500" :style="{ transform: $clicks >= 4 ? 'scale(0.4)' : 'scale(1)', transitionDelay: $clicks >= 4 ? '1s' : '0s' }">
+      <span class="text-gray-800 font-bold text-center transition-all duration-500" :style="{ fontSize: $clicks >= 4 ? '1.6rem' : '1.25rem', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }">Fett</span>
+    </div>
+    <img src="/assets/images/kohle.webp" class="w-24 h-24 object-cover rounded transition-opacity duration-500" :style="{ opacity: $clicks >= 3 ? 0 : 1 }" />
+  </div>
+  
+  <!-- Unten links: Papier Bild + Rot - Zucker/Stärke -->
+  <div v-click class="flex items-center justify-center gap-4 transition-opacity duration-500" :style="{ visibility: $clicks >= 1 ? 'visible' : 'hidden', opacity: $clicks >= 1 ? 1 : 0 }">
+    <img src="/assets/images/papier.avif" class="w-24 h-24 object-cover rounded" />
+    <div class="relative">
+      <div class="w-32 h-32 rounded-full bg-red-500 flex items-center justify-center transition-transform duration-500" :style="{ transform: $clicks >= 4 ? 'scale(1.5)' : ($clicks >= 2 ? 'scale(0.5)' : 'scale(1)'), transitionDelay: $clicks >= 4 ? '1s' : '0s' }">
+        <span class="text-white text-2xl font-bold text-center" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">Zucker<br/>Stärke</span>
+      </div>
+      <!-- Fragezeichen Overlay -->
+      <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500" :style="{ opacity: $clicks >= 3 && $clicks < 4 ? 1 : 0, transitionDelay: $clicks >= 4 ? '1s' : '0s' }">
+        <span class="text-white text-7xl font-bold" style="text-shadow: 0 3px 6px rgba(0,0,0,0.7)">?</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Unten rechts: Gelb/Rot gestreift - Pflanzenöle + Giftflasche -->
+  <div v-click class="flex items-center justify-center gap-4 transition-opacity duration-500" :style="{ visibility: $clicks >= 4 ? 'visible' : 'hidden', opacity: $clicks >= 4 ? 1 : 0 }">
+    <div class="w-32 h-32 rounded-full flex items-center justify-center" style="background: repeating-linear-gradient(45deg, #FBBF24, #FBBF24 10px, #991B1B 10px, #991B1B 20px);">
+      <span class="text-white text-2xl font-bold text-center" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">Pflanzenöle</span>
+    </div>
+    <img src="/assets/images/giftflasche.webp" class="w-24 h-24 object-cover rounded" />
+  </div>
+</div>
 
 ---
 title: meiden
