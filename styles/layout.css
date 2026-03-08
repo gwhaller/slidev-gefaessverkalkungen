@@ -18,3 +18,9 @@ h3 {
 .slidev-vclick-current {
   opacity: 1 !important;
 }
+/* Dimmung für bestimmte Elemente verhindern */
+.no-dim,
+.no-dim .slidev-vclick-prior,
+.no-dim .slidev-vclick-target {
+  opacity: 1 !important;
+}

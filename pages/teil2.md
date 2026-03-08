@@ -2,7 +2,13 @@
 title: Motivation
 ---
 
-## Meine Motivation:
+<br />
+<br />
+
+# Meine Motivation
+
+<!--
+<span class="text-white text-xl">
 
 - bin Schulmediziner und war Wissenschaftler
 - lebenslage Gewichtsprobleme
@@ -12,6 +18,9 @@ title: Motivation
 - Selbstexperimente mit Vit-D
 - warum weis ich das nicht?
 - Ernährung Literatur - keine Wissenschaft - Hierarchie
+
+</span>
+-->
 
 ---
 title: evolution
@@ -55,6 +64,13 @@ layout: two-cols-header
 <img src="/assets/images/zuckerwuerfel.jpg" class="mx-auto mt-4 w-180"/>
 
 ---
+title: dick oder dünn
+layout: image
+image: /assets/images/dickoduenn.jpg
+backgroundSize: 60%
+---
+
+---
 
 ## Was ist Diabetes mellitus?
 
@@ -89,7 +105,7 @@ Speicher- und Wachstumshormon
 - Überschuß an <span class="text-red-4">Zucker</span> als Fett eingespeichert
 - blockiert den Fettabbau
 
-Sorgt für einen niedrig stabilen Blutzucker
+Sorgt für einen niedrig stabilen <span class="text-red-4">Blutzucker</span>
 
 </v-clicks>
 
@@ -97,12 +113,9 @@ Sorgt für einen niedrig stabilen Blutzucker
 
 <img src="/assets/images/diabetesmaedchen.jpg" class="mx-auto mt-16 w-180"/>
 
----
-title: dick oder dünn
-layout: image
-image: /assets/images/dickoduenn.jpg
-backgroundSize: 60%
----
+<!--
+<span class="text-white text-3xl">1920</span>
+-->
 
 ---
 
@@ -122,7 +135,7 @@ backgroundSize: 60%
 
 # Angus Barbieri
 
-## 382 Tage lang gefastet
+### 382 Tage lang gefastet (14. Juli 1965 bis zum 30.07.1966) -125kg
 
 <img src="/assets/images/Angus_Barbieri.jpg" class="mx-auto mt-4 w-180"/>
 
@@ -245,7 +258,7 @@ clicks: 2
 
 - Die körperzellen können kein <span class="text-red-4">Zucker</span> mehr aufnehmen
 
-## <span class="text-blue-4">Insulin</span> <span class="ml-5"><mdi-arrow-up-thin class="text-2l" /></span>
+## <span class="text-blue-4">Insulin</span> <span class="ml-5"><mdi-arrow-up-thin class="text-5xl" /></span>
 
 ## <span class="text-red-4">Blutzucker</span><span class="ml-5"><mdi-arrow-up-thin class="text-2l" /></span>
 
@@ -299,7 +312,7 @@ layout: two-cols-header
 <img src="/assets/images/glykokalyx1.png" class="w-120 mb-14" />
 
 ---
-title: Glykokalyx2
+title: Glykokalyx
 layout: two-cols-header
 image: "/assets/images/glykokalyx.png"
 ---
@@ -340,10 +353,10 @@ layout: two-cols
   - Hautveränderungen
   - Gicht
   - Übergewicht, insbesondere Bauchfett
-  - Labor: Triglyceridd, HOMA-Index
+  - Labor: Triglyceride, HOMA-Index
 
 ---
-clicks: 4
+clicks: 5
 ---
 
 # Ernährungsempfehlung
@@ -366,10 +379,10 @@ clicks: 4
   </div>
   
   <!-- Unten links: Papier Bild + Rot - Zucker/Stärke -->
-  <div v-click class="flex items-center justify-center gap-4 transition-opacity duration-500" :style="{ visibility: $clicks >= 1 ? 'visible' : 'hidden', opacity: $clicks >= 1 ? 1 : 0 }">
-    <img src="/assets/images/papier.avif" class="w-24 h-24 object-cover rounded" />
+  <div v-click class="no-dim flex items-center justify-center gap-4 transition-opacity duration-500" :style="{ visibility: $clicks >= 1 ? 'visible' : 'hidden', opacity: 1 }">
+    <img src="/assets/images/papier.avif" class="no-dim w-24 h-24 object-cover rounded" :style="{ opacity: 1 }" />
     <div class="relative">
-      <div class="w-32 h-32 rounded-full bg-red-500 flex items-center justify-center transition-transform duration-500" :style="{ transform: $clicks >= 4 ? 'scale(1.5)' : ($clicks >= 2 ? 'scale(0.5)' : 'scale(1)'), transitionDelay: $clicks >= 4 ? '1s' : '0s' }">
+      <div class="w-32 h-32 rounded-full bg-red-500 flex items-center justify-center transition-transform duration-500" :style="{ transform: $clicks >= 5 ? 'scale(1.5)' : ($clicks >= 2 && $clicks < 5 ? 'scale(0.5)' : 'scale(1)'), opacity: 1 }">
         <span class="text-white text-2xl font-bold text-center" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">Zucker<br/>Stärke</span>
       </div>
       <!-- Fragezeichen Overlay -->
@@ -380,11 +393,11 @@ clicks: 4
   </div>
   
   <!-- Unten rechts: Gelb/Rot gestreift - Pflanzenöle + Giftflasche -->
-  <div v-click class="flex items-center justify-center gap-4 transition-opacity duration-500" :style="{ visibility: $clicks >= 4 ? 'visible' : 'hidden', opacity: $clicks >= 4 ? 1 : 0 }">
-    <div class="w-32 h-32 rounded-full flex items-center justify-center" style="background: repeating-linear-gradient(45deg, #FBBF24, #FBBF24 10px, #991B1B 10px, #991B1B 20px);">
+  <div v-click class="no-dim flex items-center justify-center gap-4 transition-opacity duration-500" :style="{ visibility: $clicks >= 4 ? 'visible' : 'hidden', opacity: $clicks >= 4 ? 1 : 0 }">
+    <div class="no-dim w-32 h-32 rounded-full flex items-center justify-center" style="background: repeating-linear-gradient(45deg, #FBBF24, #FBBF24 10px, #991B1B 10px, #991B1B 20px);">
       <span class="text-white text-2xl font-bold text-center" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">Pflanzenöle</span>
     </div>
-    <img src="/assets/images/giftflasche.webp" class="w-24 h-24 object-cover rounded" />
+    <img src="/assets/images/giftflasche.webp" class="no-dim w-24 h-24 object-cover rounded" />
   </div>
 </div>
 
@@ -490,7 +503,7 @@ backgroundSize: contain
 title: -- Die Cholesterinhypothese
 ---
 
-### Die Cholesterinhypothese
+#### Die Cholesterinhypothese
 
 <v-clicks>
 
@@ -713,11 +726,10 @@ image: /assets/images/finanzierung2.jpg
 
 ---
 title: Mehrländerstudie
+clicks: 1
 ---
 
-<SlidevVideo autoplay>
-  <source src="/assets/videos/keys.mp4" type="video/mp4" />
-</SlidevVideo>
+<VideoWithPause src="/assets/videos/keys.mp4" :pauseOffset="5" :play="$clicks >= 1" />
 
 ---
 title: Fragebogen

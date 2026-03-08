@@ -19,7 +19,7 @@ lang: de-DE
 
 ## Könnte ich davon betroffen sein? Was wären die Folgen?
 
-<div class='abs-bl m-6'>Klinik im Dialog - 09.März.2026</div>
+<div class='abs-bl m-6'>Klinik im Dialog - 09. März 2026</div>
 
 ---
 src: ./pages/teil1.md
