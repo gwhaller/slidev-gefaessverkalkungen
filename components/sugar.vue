@@ -1,7 +1,42 @@
 <script setup>
+import { ref, onUnmounted } from 'vue'
+
 const props = defineProps({
   clicks: { type: Number, default: 0 },
-});
+})
+
+const insulinScale = ref(1)
+const zuckerScale  = ref(1)
+const ovalScale    = ref(1)
+
+let rafId     = null
+let startTime = null
+
+function pulseFactor(t, period) {
+  return (Math.sin((t % period) / period * Math.PI * 2 - Math.PI / 2) + 1) / 2
+}
+
+function tick(ts) {
+  if (!startTime) startTime = ts
+  const t = ts - startTime
+
+  insulinScale.value = (props.clicks >= 6 && props.clicks < 8)
+    ? 1 + pulseFactor(t, 1200) * 0.12 : 1
+  zuckerScale.value  = ((props.clicks >= 5 && props.clicks < 8) || props.clicks >= 11)
+    ? 1 + pulseFactor(t, 1200) * 0.15 : 1
+  ovalScale.value    = (props.clicks >= 7 && props.clicks < 8)
+    ? 1 + pulseFactor(t, 1400) * 0.06 : 1
+
+  rafId = requestAnimationFrame(tick)
+}
+
+rafId = requestAnimationFrame(tick)
+onUnmounted(() => { if (rafId) cancelAnimationFrame(rafId) })
+
+function svgScaleTransform(s, cx, cy) {
+  if (s === 1) return undefined
+  return `translate(${cx},${cy}) scale(${s.toFixed(4)}) translate(${-cx},${-cy})`
+}
 </script>
 
 <template>
@@ -125,12 +160,11 @@ const props = defineProps({
     />
     <!-- Insulin am linken Pfeil: ab click 2, größer ab click 6, pulsiert bis click 8 -->
     <text
-      :class="{ 'insulin-pulse': clicks >= 6 && clicks < 8 }"
+      :transform="svgScaleTransform(insulinScale, 140, 524)"
       :style="{
         opacity: clicks >= 2 ? 1 : 0,
         fontSize: clicks >= 6 ? '72px' : '44px',
         transition: 'opacity 0.6s ease, font-size 0.6s ease',
-        transformOrigin: '140px 534px',
       }"
       x="20"
       y="560"
@@ -174,12 +208,11 @@ const props = defineProps({
     />
     <!-- Insulin am rechten Pfeil: ab click 4, größer ab click 6, pulsiert bis click 8 -->
     <text
-      :class="{ 'insulin-pulse': clicks >= 6 && clicks < 8 }"
+      :transform="svgScaleTransform(insulinScale, 960, 524)"
       :style="{
         opacity: clicks >= 4 ? 1 : 0,
         fontSize: clicks >= 6 ? '72px' : '44px',
         transition: 'opacity 0.6s ease, font-size 0.6s ease',
-        transformOrigin: '950px 534px',
       }"
       x="1070"
       y="560"
@@ -200,7 +233,7 @@ const props = defineProps({
     </text>
     <!-- Zucker oben: erscheint ab click 1, pulsiert ab click 5 und click 11 -->
     <text
-      :class="{ 'zucker-pulse': (clicks >= 5 && clicks < 8) || clicks >= 11 }"
+      :transform="svgScaleTransform(zuckerScale, 549, 90)"
       xml:space="preserve"
       style="
         font-style: normal;
@@ -225,7 +258,6 @@ const props = defineProps({
         opacity: clicks >= 1 ? 1 : 0,
         fontSize: (clicks >= 5 && clicks < 8) || clicks >= 11 ? '80px' : '64px',
         transition: 'opacity 0.6s ease, font-size 0.6s ease',
-        transformOrigin: '549px 90px',
       }"
       x="549"
       y="122.07543"
@@ -341,11 +373,10 @@ const props = defineProps({
       cy="680.92596"
       rx="190"
       ry="68"
-      :class="{ 'oval-pulse': clicks >= 7 && clicks < 8 }"
+      :transform="svgScaleTransform(ovalScale, 192.5, 680.9)"
       :style="{
         strokeWidth: clicks >= 7 ? 20 : 5,
         transition: 'stroke-width 0.6s ease',
-        transformOrigin: '192.5px 680.9px',
       }"
       style="
         fill: none;
@@ -890,54 +921,6 @@ const props = defineProps({
 </template>
 
 <style scoped>
-@keyframes insulin-pulse {
-  0%,
-  100% {
-    transform: scale(1) translateZ(0);
-  }
-  50% {
-    transform: scale(1.12) translateZ(0);
-  }
-}
-.insulin-pulse {
-  transform-box: view-box;
-  will-change: transform;
-  backface-visibility: hidden;
-  transition: none !important;
-  animation: insulin-pulse 1.2s ease-in-out 0.7s infinite both;
-}
-@keyframes oval-pulse {
-  0%,
-  100% {
-    transform: scale(1) translateZ(0);
-  }
-  50% {
-    transform: scale(1.06) translateZ(0);
-  }
-}
-.oval-pulse {
-  transform-box: view-box;
-  will-change: transform;
-  backface-visibility: hidden;
-  transition: none !important;
-  animation: oval-pulse 1.4s ease-in-out 0.7s infinite both;
-}
-@keyframes zucker-pulse {
-  0%,
-  100% {
-    transform: scale(1) translateZ(0);
-  }
-  50% {
-    transform: scale(1.15) translateZ(0);
-  }
-}
-.zucker-pulse {
-  transform-box: view-box;
-  will-change: transform;
-  backface-visibility: hidden;
-  transition: none !important;
-  animation: zucker-pulse 1.2s ease-in-out 0.7s infinite both;
-}
 @keyframes muskel-through {
   from {
     transform: translateY(80px);
