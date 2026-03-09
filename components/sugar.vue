@@ -130,6 +130,7 @@ const props = defineProps({
         opacity: clicks >= 2 ? 1 : 0,
         fontSize: clicks >= 6 ? '72px' : '44px',
         transition: 'opacity 0.6s ease, font-size 0.6s ease',
+        transformOrigin: '140px 534px',
       }"
       x="20"
       y="560"
@@ -178,6 +179,7 @@ const props = defineProps({
         opacity: clicks >= 4 ? 1 : 0,
         fontSize: clicks >= 6 ? '72px' : '44px',
         transition: 'opacity 0.6s ease, font-size 0.6s ease',
+        transformOrigin: '950px 534px',
       }"
       x="1070"
       y="560"
@@ -223,6 +225,7 @@ const props = defineProps({
         opacity: clicks >= 1 ? 1 : 0,
         fontSize: (clicks >= 5 && clicks < 8) || clicks >= 11 ? '80px' : '64px',
         transition: 'opacity 0.6s ease, font-size 0.6s ease',
+        transformOrigin: '549px 90px',
       }"
       x="549"
       y="122.07543"
@@ -342,6 +345,7 @@ const props = defineProps({
       :style="{
         strokeWidth: clicks >= 7 ? 20 : 5,
         transition: 'stroke-width 0.6s ease',
+        transformOrigin: '192.5px 680.9px',
       }"
       style="
         fill: none;
@@ -896,8 +900,7 @@ const props = defineProps({
   }
 }
 .insulin-pulse {
-  transform-box: fill-box;
-  transform-origin: center;
+  transform-box: view-box;
   will-change: transform;
   backface-visibility: hidden;
   transition: none !important;
@@ -913,8 +916,7 @@ const props = defineProps({
   }
 }
 .oval-pulse {
-  transform-box: fill-box;
-  transform-origin: center;
+  transform-box: view-box;
   will-change: transform;
   backface-visibility: hidden;
   transition: none !important;
@@ -930,8 +932,7 @@ const props = defineProps({
   }
 }
 .zucker-pulse {
-  transform-box: fill-box;
-  transform-origin: center;
+  transform-box: view-box;
   will-change: transform;
   backface-visibility: hidden;
   transition: none !important;
