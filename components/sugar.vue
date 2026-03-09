@@ -900,7 +900,8 @@ const props = defineProps({
   transform-origin: center;
   will-change: transform;
   backface-visibility: hidden;
-  animation: insulin-pulse 1.2s ease-in-out infinite;
+  transition: none !important;
+  animation: insulin-pulse 1.2s ease-in-out 0.7s infinite both;
 }
 @keyframes oval-pulse {
   0%,
@@ -916,7 +917,8 @@ const props = defineProps({
   transform-origin: center;
   will-change: transform;
   backface-visibility: hidden;
-  animation: oval-pulse 1.4s ease-in-out infinite;
+  transition: none !important;
+  animation: oval-pulse 1.4s ease-in-out 0.7s infinite both;
 }
 @keyframes zucker-pulse {
   0%,
@@ -932,7 +934,8 @@ const props = defineProps({
   transform-origin: center;
   will-change: transform;
   backface-visibility: hidden;
-  animation: zucker-pulse 1.2s ease-in-out infinite;
+  transition: none !important;
+  animation: zucker-pulse 1.2s ease-in-out 0.7s infinite both;
 }
 @keyframes muskel-through {
   from {
