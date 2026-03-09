@@ -789,10 +789,11 @@ function svgScaleTransform(s, cx, cy) {
     </text>
     <!-- Unterer Pfeil Fettgewebe→Muskel: verschwindet ab click 1, erscheint wieder ab click 3 mit 2s Delay, grau -->
     <path
+      :class="{ 'arrow-appear': clicks >= 3 }"
       :style="{
         opacity: clicks === 0 ? 1 : clicks >= 3 ? 1 : 0,
         stroke: clicks >= 3 ? '#333333' : '#ffffff',
-        transition: clicks >= 3 ? 'opacity 0.6s ease 2s' : 'opacity 0.6s ease',
+        transition: clicks >= 1 && clicks < 3 ? 'opacity 0.6s ease' : 'none',
       }"
       style="
         fill: none;
@@ -811,9 +812,9 @@ function svgScaleTransform(s, cx, cy) {
     />
     <!-- X unter Insulin: erscheint ab click 3 mit 1s Delay -->
     <path
+      :class="{ 'x-appear': clicks >= 3 }"
       :style="{
         opacity: clicks >= 3 ? 1 : 0,
-        transition: 'opacity 0.6s ease 1s',
         fill: '#eaab00',
         stroke: '#ffffff',
       }"
@@ -830,9 +831,9 @@ function svgScaleTransform(s, cx, cy) {
       id="path9718"
     />
     <path
+      :class="{ 'x-appear': clicks >= 3 }"
       :style="{
         opacity: clicks >= 3 ? 1 : 0,
-        transition: 'opacity 0.6s ease 1s',
         fill: '#eaab00',
         stroke: '#ffffff',
       }"
@@ -927,6 +928,16 @@ function svgScaleTransform(s, cx, cy) {
 </template>
 
 <style scoped>
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.x-appear {
+  animation: fade-in 0.6s ease 1s both;
+}
+.arrow-appear {
+  animation: fade-in 0.6s ease 2s both;
+}
 @keyframes muskel-through {
   from {
     transform: translateY(80px);
