@@ -929,8 +929,12 @@ function svgScaleTransform(s, cx, cy) {
 
 <style scoped>
 @keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .x-appear {
   animation: fade-in 0.6s ease 1s both;
