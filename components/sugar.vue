@@ -747,7 +747,7 @@ function svgScaleTransform(s, cx, cy) {
       cy="679.16058"
       rx="190"
       ry="68"
-      :class="{ 'oval-pulse': clicks >= 7 && clicks < 8 }"
+      :transform="svgScaleTransform(ovalScale, 888.15, 679.16)"
       :style="{
         strokeWidth: clicks >= 7 ? 20 : 5,
         transition: 'stroke-width 0.6s ease',
@@ -764,7 +764,7 @@ function svgScaleTransform(s, cx, cy) {
     />
     <!-- Insulin am unteren Pfeil: ab click 3, pulsiert bis click 8 -->
     <text
-      :class="{ 'insulin-pulse': clicks >= 6 && clicks < 8 }"
+      :transform="svgScaleTransform(insulinScale, 641, 590)"
       :style="{
         opacity: clicks >= 3 ? 1 : 0,
         fontSize: clicks >= 6 ? '72px' : '42px',
