@@ -1,41 +1,47 @@
 <script setup>
-import { ref, onUnmounted } from 'vue'
+import { ref, onUnmounted } from "vue";
 
 const props = defineProps({
   clicks: { type: Number, default: 0 },
-})
+});
 
-const insulinScale = ref(1)
-const zuckerScale  = ref(1)
-const ovalScale    = ref(1)
+const insulinScale = ref(1);
+const zuckerScale = ref(1);
+const ovalScale = ref(1);
 
-let rafId     = null
-let startTime = null
+let rafId = null;
+let startTime = null;
 
 function pulseFactor(t, period) {
-  return (Math.sin((t % period) / period * Math.PI * 2 - Math.PI / 2) + 1) / 2
+  return (
+    (Math.sin(((t % period) / period) * Math.PI * 2 - Math.PI / 2) + 1) / 2
+  );
 }
 
 function tick(ts) {
-  if (!startTime) startTime = ts
-  const t = ts - startTime
+  if (!startTime) startTime = ts;
+  const t = ts - startTime;
 
-  insulinScale.value = (props.clicks >= 6 && props.clicks < 8)
-    ? 1 + pulseFactor(t, 1200) * 0.12 : 1
-  zuckerScale.value  = ((props.clicks >= 5 && props.clicks < 8) || props.clicks >= 11)
-    ? 1 + pulseFactor(t, 1200) * 0.15 : 1
-  ovalScale.value    = (props.clicks >= 7 && props.clicks < 8)
-    ? 1 + pulseFactor(t, 1400) * 0.06 : 1
+  insulinScale.value =
+    props.clicks >= 6 && props.clicks < 8 ? 1 + pulseFactor(t, 1200) * 0.12 : 1;
+  zuckerScale.value =
+    (props.clicks >= 5 && props.clicks < 8) || props.clicks >= 11
+      ? 1 + pulseFactor(t, 1200) * 0.15
+      : 1;
+  ovalScale.value =
+    props.clicks >= 7 && props.clicks < 8 ? 1 + pulseFactor(t, 1400) * 0.06 : 1;
 
-  rafId = requestAnimationFrame(tick)
+  rafId = requestAnimationFrame(tick);
 }
 
-rafId = requestAnimationFrame(tick)
-onUnmounted(() => { if (rafId) cancelAnimationFrame(rafId) })
+rafId = requestAnimationFrame(tick);
+onUnmounted(() => {
+  if (rafId) cancelAnimationFrame(rafId);
+});
 
 function svgScaleTransform(s, cx, cy) {
-  if (s === 1) return undefined
-  return `translate(${cx},${cy}) scale(${s.toFixed(4)}) translate(${-cx},${-cy})`
+  if (s === 1) return undefined;
+  return `translate(${cx},${cy}) scale(${s.toFixed(4)}) translate(${-cx},${-cy})`;
 }
 </script>
 
