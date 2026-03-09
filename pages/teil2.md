@@ -332,13 +332,6 @@ title: prä-diabetiker
 layout: two-cols
 ---
 
-# Diabetiker
-
-- nüchtern <span class="text-red-4">Blutzucker</span> hoch
-- "normal" im Alter
-
-::right::
-
 # Prä-Diabetiker
 
 - nüchtern <span class="text-red-4">Blutzucker</span> normal
@@ -354,6 +347,13 @@ layout: two-cols
   - Gicht
   - Übergewicht, insbesondere Bauchfett
   - Labor: Triglyceride, HOMA-Index
+
+::right::
+
+# Diabetiker
+
+- nüchtern <span class="text-red-4">Blutzucker</span> hoch
+- "normal" im Alter
 
 ---
 clicks: 5
