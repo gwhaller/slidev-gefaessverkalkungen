@@ -889,43 +889,49 @@ const props = defineProps({
 @keyframes insulin-pulse {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
   50% {
-    transform: scale(1.12);
+    transform: scale(1.12) translateZ(0);
   }
 }
 .insulin-pulse {
   transform-box: fill-box;
   transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: insulin-pulse 1.2s ease-in-out infinite;
 }
 @keyframes oval-pulse {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
   50% {
-    transform: scale(1.06);
+    transform: scale(1.06) translateZ(0);
   }
 }
 .oval-pulse {
   transform-box: fill-box;
   transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: oval-pulse 1.4s ease-in-out infinite;
 }
 @keyframes zucker-pulse {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
   50% {
-    transform: scale(1.15);
+    transform: scale(1.15) translateZ(0);
   }
 }
 .zucker-pulse {
   transform-box: fill-box;
   transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: zucker-pulse 1.2s ease-in-out infinite;
 }
 @keyframes muskel-through {
