@@ -23,15 +23,6 @@ title: Motivation
 -->
 
 ---
-title: evolution
-layout: image
-image: /assets/images/evolution.png
-backgroundSize: 80%
----
-
-<div class="abs-bl left-1/2 -translate-x-1/2 w160 h32  bg-white font-bold text-blue-700 text-5xl justify-center py-8 mb-4 flex">... macht uns krank?</div>
-
----
 title: -- Gesundheit ist Eigenverantwortung
 layout: center
 class: text-center text-6xl
@@ -478,6 +469,15 @@ clicks: 18
   </div>
   <div class="text-green-300 text-lg font-bold mt-1">500.000 Jahre</div>
 </div>
+
+---
+title: evolution
+layout: image
+image: /assets/images/evolution.png
+backgroundSize: 80%
+---
+
+<div class="abs-bl left-1/2 -translate-x-1/2 w160 h32  bg-white font-bold text-blue-700 text-5xl justify-center py-8 mb-4 flex">... macht uns krank?</div>
 
 ---
 title: meiden
