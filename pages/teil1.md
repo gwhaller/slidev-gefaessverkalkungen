@@ -122,6 +122,7 @@ image: /assets/images/fuesse.avif
 
 <v-clicks>
 
+- keine Beschwerden
 - <span v-mark.underline.red="1">Schmerzen</span> beim Gehen<br>
   Füße, Waden, Oberschenkel, Gesäß, -einseitig
 - kühle, blasse oder marmorierte Haut
