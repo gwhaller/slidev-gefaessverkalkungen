@@ -1,5 +1,5 @@
 ---
-title: pAVK
+title: pAVK 07.04.2026
 theme: default
 layout: cover
 wakelock: true
@@ -15,9 +15,9 @@ favicon: /favicon.ico
 lang: de-DE
 ---
 
-# Gefäßverkalkungen
+# Schmerzen in den Beinen
 
-## Könnte ich davon betroffen sein? Was wären die Folgen?
+## Nicht selten sind Durchblutungsstörungen die Ursache
 
 <div class='abs-bl m-6'>Klinik im Dialog - 27. April 2026</div>
 
