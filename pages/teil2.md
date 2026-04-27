@@ -55,13 +55,6 @@ layout: two-cols-header
 <img src="/assets/images/zuckerwuerfel.jpg" class="mx-auto mt-4 w-180"/>
 
 ---
-title: dick oder dünn
-layout: image
-image: /assets/images/dickoduenn.jpg
-backgroundSize: 60%
----
-
----
 
 ## Was ist Diabetes mellitus?
 
@@ -109,6 +102,13 @@ Sorgt für einen niedrig stabilen <span class="text-red-4">Blutzucker</span>
 -->
 
 ---
+title: dick oder dünn
+layout: image
+image: /assets/images/dickoduenn.jpg
+backgroundSize: 60%
+---
+
+---
 
 <div class="mb-4">
   <span class="text-4xl font-bold">ohne Kohlenhydrate </span>
@@ -121,14 +121,6 @@ Sorgt für einen niedrig stabilen <span class="text-red-4">Blutzucker</span>
 </div>
 
 <bzohne />
-
----
-
-# Angus Barbieri
-
-### 382 Tage lang gefastet (14. Juli 1965 bis zum 30.07.1966) -125kg
-
-<img src="/assets/images/Angus_Barbieri.jpg" class="mx-auto mt-4 w-180"/>
 
 ---
 title: wald
@@ -280,6 +272,14 @@ layout: image
 image: /assets/images/aerzteblatt.png
 backgroundSize: 38%
 ---
+
+---
+
+# Angus Barbieri
+
+### 382 Tage lang gefastet (14. Juli 1965 bis zum 30.07.1966) -125kg
+
+<img src="/assets/images/Angus_Barbieri.jpg" class="mx-auto mt-4 w-180"/>
 
 ---
 title: Blutzucker
