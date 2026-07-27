@@ -1,0 +1,209 @@
+name: Build and deploy Slidev
+
+run-name: ${{ gitea.actor }} deployt ${{ gitea.repository }} 🚀
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu_nginx
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          # Funktioniert auch, wenn das Projekt kein Submodul besitzt.
+          submodules: recursive
+
+      - name: Vortragsnamen und Pfade bestimmen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          REPOSITORY_NAME="${GITHUB_REPOSITORY##*/}"
+
+          # Nur Repositorys nach dem Schema slidev-<name> zulassen.
+          if [[ ! "$REPOSITORY_NAME" =~ ^slidev-.+ ]]; then
+            echo "❌ Ungültiger Repositoryname: $REPOSITORY_NAME"
+            echo "Erwartet wird: slidev-<vortragsname>"
+            exit 1
+          fi
+
+          SLIDE_NAME="${REPOSITORY_NAME#slidev-}"
+
+          echo "REPOSITORY_NAME=$REPOSITORY_NAME" >> "$GITHUB_ENV"
+          echo "SLIDE_NAME=$SLIDE_NAME" >> "$GITHUB_ENV"
+          echo "SLIDE_BASE=/$SLIDE_NAME/" >> "$GITHUB_ENV"
+          echo "DEPLOY_DIR=/var/www/slidev/$SLIDE_NAME" >> "$GITHUB_ENV"
+          echo "BACKUP_DIR=/var/www/backups/slidev/$SLIDE_NAME" >> "$GITHUB_ENV"
+
+          echo "Repository:   $REPOSITORY_NAME"
+          echo "Vortrag:      $SLIDE_NAME"
+          echo "Base-Pfad:    /$SLIDE_NAME/"
+          echo "Zielordner:   /var/www/slidev/$SLIDE_NAME"
+          echo "Backupordner: /var/www/backups/slidev/$SLIDE_NAME"
+
+      - name: Projektdateien prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -f package.json ]; then
+            echo "❌ package.json wurde nicht gefunden."
+            exit 1
+          fi
+
+          if [ -f pnpm-lock.yaml ]; then
+            echo "PACKAGE_MANAGER=pnpm" >> "$GITHUB_ENV"
+            echo "Paketmanager: pnpm"
+          elif [ -f package-lock.json ]; then
+            echo "PACKAGE_MANAGER=npm" >> "$GITHUB_ENV"
+            echo "Paketmanager: npm"
+          else
+            echo "❌ Kein unterstütztes Lockfile gefunden."
+            echo "Erwartet wird pnpm-lock.yaml oder package-lock.json."
+            exit 1
+          fi
+
+      - name: pnpm vorbereiten
+        if: env.PACKAGE_MANAGER == 'pnpm'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+          echo "pnpm-Version:"
+          pnpm --version
+
+      - name: Node-Abhängigkeiten installieren
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ "$PACKAGE_MANAGER" = "pnpm" ]; then
+            pnpm install --frozen-lockfile
+          elif [ "$PACKAGE_MANAGER" = "npm" ]; then
+            npm ci
+          else
+            echo "❌ Unbekannter Paketmanager: $PACKAGE_MANAGER"
+            exit 1
+          fi
+
+      - name: Slidev bauen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf dist
+
+          if [ "$PACKAGE_MANAGER" = "pnpm" ]; then
+            pnpm exec slidev build --base "$SLIDE_BASE"
+          elif [ "$PACKAGE_MANAGER" = "npm" ]; then
+            npx slidev build --base "$SLIDE_BASE"
+          else
+            echo "❌ Unbekannter Paketmanager: $PACKAGE_MANAGER"
+            exit 1
+          fi
+
+      - name: Build prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -f dist/index.html ]; then
+            echo "❌ dist/index.html wurde nicht erzeugt."
+            exit 1
+          fi
+
+          echo "Build erfolgreich:"
+          du -sh dist
+          find dist -maxdepth 2 -type f | head -n 20
+
+          if grep -R "/slidev-" dist/index.html; then
+            echo "⚠️ Hinweis: Im Build wurde möglicherweise ein unerwarteter Base-Pfad gefunden."
+          fi
+
+      - name: Ziel- und Backup-Verzeichnisse vorbereiten
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p "$DEPLOY_DIR"
+          mkdir -p "$BACKUP_DIR"
+
+      - name: Vortrag deployen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BACKUP_TIMESTAMP="$(date +%Y-%m-%d_%H-%M-%S)"
+          CURRENT_BACKUP_DIR="$BACKUP_DIR/$BACKUP_TIMESTAMP"
+
+          echo "Deployment:"
+          echo "  Quelle: dist/"
+          echo "  Ziel:   $DEPLOY_DIR/"
+          echo "  Backup: $CURRENT_BACKUP_DIR"
+
+          rsync -av \
+            --delete \
+            --backup \
+            --backup-dir="$CURRENT_BACKUP_DIR" \
+            dist/ \
+            "$DEPLOY_DIR/"
+
+      - name: Deployment prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -f "$DEPLOY_DIR/index.html" ]; then
+            echo "❌ Deployment fehlgeschlagen: index.html fehlt im Zielverzeichnis."
+            exit 1
+          fi
+
+          echo "Deployment erfolgreich:"
+          du -sh "$DEPLOY_DIR"
+          ls -la "$DEPLOY_DIR" | head -n 20
+
+      - name: Alte Backups löschen
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cd "$BACKUP_DIR"
+
+          mapfile -t OLD_BACKUPS < <(
+            find . \
+              -mindepth 1 \
+              -maxdepth 1 \
+              -type d \
+              -printf '%T@ %p\n' |
+            sort -rn |
+            tail -n +4 |
+            cut -d' ' -f2-
+          )
+
+          if [ "${#OLD_BACKUPS[@]}" -gt 0 ]; then
+            echo "Folgende alte Backups werden gelöscht:"
+            printf '%s\n' "${OLD_BACKUPS[@]}"
+
+            rm -rf -- "${OLD_BACKUPS[@]}"
+          else
+            echo "Keine alten Backups zu löschen."
+          fi
+
+          echo
+          echo "Verbleibende Backups:"
+          find . \
+            -mindepth 1 \
+            -maxdepth 1 \
+            -type d \
+            -printf '%f\n' |
+          sort
